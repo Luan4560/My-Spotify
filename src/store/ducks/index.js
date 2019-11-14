@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import playlists from './playlists';
+import playlists from "./playlists";
 
-export default combineReducers ({
-  playlists,
+export default combineReducers({
+  playlists
 });

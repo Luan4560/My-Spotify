@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Spinner } from "../../components/Loading/styles";
+
 export const Container = styled.aside`
   height: 100%;
   width: 200px;
@@ -17,16 +19,16 @@ export const Container = styled.aside`
 
 export const Nav = styled.ul`
   margin-top: 25px;
+
+  &:first-child {
+    margin: 0;
+  }
+
   li {
+    display: flex;
+    align-items: center;
     list-style: none;
 
-    &:first-child {
-      margin: 0;
-    }
-
-    &:hover {
-      color: #fff;
-    }
     a {
       color: inherit;
       text-decoration: none;
@@ -37,14 +39,18 @@ export const Nav = styled.ul`
       &:hover {
         color: #fff;
       }
+    }
 
-      span {
-        font-size: 11px;
-        text-transform: uppercase;
-        line-height: 22px;
-        letter-spacing: 1.11px;
-        font-weight: 300;
-      }
+    span {
+      font-size: 11px;
+      text-transform: uppercase;
+      line-height: 22px;
+      letter-spacing: 1.11px;
+      font-weight: 300;
+    }
+    ${Spinner} {
+      height: 15px;
+      margin-left: 5px;
     }
   }
 `;
